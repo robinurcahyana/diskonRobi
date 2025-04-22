@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Perhitungan Diskon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        select {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+    </style>
+</head>
+<body>
+    <!--Bagian container kalkulator-->
+    <div class="container">
+        <h2>Aplikasi Perhitungan Diskon</h2>
+        <form id="fbarang">
+            <input type="text" id="namaBarang" placeholder="Masukan nama barang" required>
+            <select id="KategoriBarang">
+                <option value="">Pilih Kategori</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Minuman">Minuman</option>
+            </select>
+            <input type="number" id="Harga" placeholder="Rp (Harga)" required>
+            <input type="number" id="diskon" placeholder="% (Diskon)" required>
+      
+            <button type="button" class="biru" onclick="hitungDiskon()">Hitung</button>
+            <button type="button" class="merah" onclick="bersih()">Bersih</button>
+        </form>
+        <div id="tampil_data">
+            <h3>Nama Barang: <span id="hasil_nama_barang"></span></h3>
+            <h3>Kategori Barang: <span id="hasil_kategori_barang"></span></h3>
+            <h3>Nilai Diskon: <span id="hasil_diskon"></span></h3>
+            <h3>Total Harga: <span id="hasil_total_harga"></span></h3>
+
+            <button type="button" class="orange" onclick="kembali()">Kembali</button>
+        </div>
+    </div>
+
+    <script src="js/scipt.js"></script>
+</body>
+</html>
